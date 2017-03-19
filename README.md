@@ -1950,7 +1950,7 @@ Binary Search</td>
 <td class="s0" style="font-size:13px; padding:0px 3px; overflow:hidden; letter-spacing:0px; z-index:1; border-width:0px 1px 1px; border-right-color:rgb(204,204,204); border-bottom-color:rgb(204,204,204); border-style:none solid solid; border-left-color:rgb(204,204,204); vertical-align:bottom; font-family:georgia; text-align:right">
 82</td>
 <td dir="ltr" class="s1" style="font-size:13px; padding:0px 3px; overflow:hidden; letter-spacing:0px; z-index:1; border-width:0px 1px 1px 0px; border-right-color:rgb(204,204,204); border-bottom-color:rgb(204,204,204); border-style:none solid solid none; vertical-align:bottom; font-family:georgia">
-Remove Duplicates from Sorted List II</td>
+<s>Remove Duplicates from Sorted List II</s></td>
 <td class="s6" style="font-size:13px; padding:0px 3px; overflow:hidden; letter-spacing:0px; background-color:rgb(224,102,102); z-index:1; border-width:0px 1px 1px 0px; border-right-color:rgb(204,204,204); border-bottom-color:rgb(204,204,204); border-style:none solid solid none; vertical-align:bottom; font-family:georgia; color:rgb(255,255,255); text-align:right">
 3</td>
 <td class="s10" style="font-size:13px; padding:0px 3px; overflow:hidden; letter-spacing:0px; background-color:rgb(142,124,195); z-index:1; border-width:0px 1px 1px 0px; border-right-color:rgb(204,204,204); border-bottom-color:rgb(204,204,204); border-style:none solid solid none; vertical-align:bottom; font-family:georgia; color:rgb(255,255,255); text-align:right">
@@ -1958,7 +1958,7 @@ Remove Duplicates from Sorted List II</td>
 <td dir="ltr" class="s1" style="font-size:13px; padding:0px 3px; overflow:hidden; letter-spacing:0px; z-index:1; border-width:0px 1px 1px 0px; border-right-color:rgb(204,204,204); border-bottom-color:rgb(204,204,204); border-style:none solid solid none; vertical-align:bottom; font-family:georgia">
 linked list</td>
 <td dir="ltr" class="s1" style="font-size:13px; padding:0px 3px; overflow:hidden; letter-spacing:0px; z-index:1; border-width:0px 1px 1px 0px; border-right-color:rgb(204,204,204); border-bottom-color:rgb(204,204,204); border-style:none solid solid none; vertical-align:bottom; font-family:georgia">
-<font color="green">DONE</font></td>
+Recursion</td>
 </tr>
 <tr dir="ltr">
 <td class="hd" style="font-size:13px; padding:0px; overflow:hidden; letter-spacing:0px; background-color:rgb(200,200,200); z-index:1; border-width:0px 0px 1px; border-bottom-color:rgb(204,204,204); border-bottom-style:solid; border-top-style:none; border-left-style:none; vertical-align:bottom">
