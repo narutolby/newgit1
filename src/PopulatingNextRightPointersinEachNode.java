@@ -27,7 +27,11 @@ public class PopulatingNextRightPointersinEachNode {
 
                 if(e.get(j).left != null){
                     t.add(e.get(j).left);
+
+                }
+                if(e.get(j).right != null){
                     t.add(e.get(j).right);
+
                 }
 
             }
