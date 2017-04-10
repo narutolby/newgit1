@@ -2724,7 +2724,7 @@ DFS</td>
 <td class="s0" style="font-size:13px; padding:0px 3px; overflow:hidden; letter-spacing:0px; z-index:1; border-width:0px 1px 1px; border-right-color:rgb(204,204,204); border-bottom-color:rgb(204,204,204); border-style:none solid solid; border-left-color:rgb(204,204,204); vertical-align:bottom; font-family:georgia; text-align:right">
 111</td>
 <td dir="ltr" class="s1" style="font-size:13px; padding:0px 3px; overflow:hidden; letter-spacing:0px; z-index:1; border-width:0px 1px 1px 0px; border-right-color:rgb(204,204,204); border-bottom-color:rgb(204,204,204); border-style:none solid solid none; vertical-align:bottom; font-family:georgia">
-Minimum Depth of Binary Tree</td>
+<s>Minimum Depth of Binary Tree</s></td>
 <td class="s12" style="font-size:13px; padding:0px 3px; overflow:hidden; letter-spacing:0px; z-index:1; border-width:0px 1px 1px 0px; border-right-color:rgb(204,204,204); border-bottom-color:rgb(204,204,204); border-style:none solid solid none; vertical-align:bottom; font-family:georgia; text-align:right">
 1</td>
 <td class="s12" style="font-size:13px; padding:0px 3px; overflow:hidden; letter-spacing:0px; z-index:1; border-width:0px 1px 1px 0px; border-right-color:rgb(204,204,204); border-bottom-color:rgb(204,204,204); border-style:none solid solid none; vertical-align:bottom; font-family:georgia; text-align:right">
