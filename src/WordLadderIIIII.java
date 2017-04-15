@@ -32,6 +32,7 @@ public class WordLadderIIIII {
         wordSet.remove(beginWord);
         shortestMap.put(beginWord, 0);
         queue.add(beginWord);
+
         while(!queue.isEmpty()){
             String word = queue.poll();
             char[] chars = word.toCharArray();
