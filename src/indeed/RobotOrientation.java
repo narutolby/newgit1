@@ -7,7 +7,7 @@ package indeed;
  */
 public class RobotOrientation {
     public static void main(String[]args){
-
+        
     }
 
 
