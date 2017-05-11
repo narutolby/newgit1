@@ -51,4 +51,7 @@ public class ReverseLinkedListII {
         listNode.next = new ListNode(5);
         new ReverseLinkedListII().reverseBetween(listNode,1,2);
     }
+    <T> ListNode reverse(ListNode<T> node){
+
+    }
 }
