@@ -36,7 +36,6 @@ public class ReverseLinkedListII {
     public void reverse(ListNode s,ListNode e,ListNode pre,ListNode post){
         ListNode p = null;
         e.next = null;
-        ListNode t = s;
         while(s != null){
             ListNode tmp = s;
             s = s.next;
@@ -44,14 +43,11 @@ public class ReverseLinkedListII {
             p = tmp;
         }
         pre.next = p;
-        t.next = post;
+        p.next = post;
     }
     public static void main(String[]args){
         ListNode listNode  = new ListNode(3);
         listNode.next = new ListNode(5);
         new ReverseLinkedListII().reverseBetween(listNode,1,2);
-    }
-    <T> ListNode reverse(ListNode<T> node){
-
     }
 }
