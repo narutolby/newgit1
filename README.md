@@ -780,7 +780,7 @@ Two Pointers</td>
 <td class="s0" style="font-size:13px; padding:0px 3px; overflow:hidden; letter-spacing:0px; z-index:1; border-width:0px 1px 1px; border-right-color:rgb(204,204,204); border-bottom-color:rgb(204,204,204); border-style:none solid solid; border-left-color:rgb(204,204,204); vertical-align:bottom; font-family:georgia; text-align:right">
 31</td>
 <td dir="ltr" class="s1" style="font-size:13px; padding:0px 3px; overflow:hidden; letter-spacing:0px; z-index:1; border-width:0px 1px 1px 0px; border-right-color:rgb(204,204,204); border-bottom-color:rgb(204,204,204); border-style:none solid solid none; vertical-align:bottom; font-family:georgia">
-Next Permutation</td>
+<s>Next Permutation</s></td>
 <td class="s9" style="font-size:13px; padding:0px 3px; overflow:hidden; letter-spacing:0px; background-color:rgb(102,0,0); z-index:1; border-width:0px 1px 1px 0px; border-right-color:rgb(204,204,204); border-bottom-color:rgb(204,204,204); border-style:none solid solid none; vertical-align:bottom; font-family:georgia; color:rgb(255,255,255); text-align:right">
 5</td>
 <td class="s8" style="font-size:13px; padding:0px 3px; overflow:hidden; letter-spacing:0px; background-color:rgb(180,167,214); z-index:1; border-width:0px 1px 1px 0px; border-right-color:rgb(204,204,204); border-bottom-color:rgb(204,204,204); border-style:none solid solid none; vertical-align:bottom; font-family:georgia; text-align:right">
