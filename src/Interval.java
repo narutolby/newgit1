@@ -1,0 +1,11 @@
+/**
+ * @author boyang.lby
+ * @date 5/24/17
+ * @description
+ */
+public class Interval {
+    int start;
+    int end;
+    Interval() { start = 0; end = 0; }
+    Interval(int s, int e) { start = s; end = e; }
+}
