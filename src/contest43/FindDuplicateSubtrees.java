@@ -15,32 +15,25 @@ import contest29.TreeNode;
  * @description
  */
 public class FindDuplicateSubtrees {
-    Map<Long, TreeNode> map = new HashMap<Long,TreeNode>();
-    List<TreeNode> retList = new ArrayList<TreeNode>();
-    Set<Long> set = new HashSet<Long>();
-
     public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
-        if(root == null || (root.left == null && root.right == null)){
-            return retList;
-        }
-        hash(root);
+        List<TreeNode> retList = new ArrayList<TreeNode>();
+        Map<String,TreeNode> map = new HashMap<String,TreeNode>();
+        Set<String> set = new HashSet<String>();
+        help(root,map,retList,set);
         return retList;
     }
 
-
-    public Long hash(TreeNode root){
-        if(root == null){
-            return -99L;
+    public String help(TreeNode node,Map<String,TreeNode> map,List<TreeNode> list,Set<String> set){
+        if(node == null){
+            return "NN" + ",";
         }
-        Long hashcode = root.val + hash(root.left)*13  + hash(root.right) * 34;
-        if(map.containsKey(hashcode) && !set.contains(hashcode)){
-            if(root.val == map.get(hashcode).val){
-                retList.add(root);
-                set.add(hashcode);
-            }
+        String serilization = node.val + "," + help(node.left,map,list,set) + help(node.right,map,list,set);
+        if(map.containsKey(serilization) && !set.contains(serilization)){
+            list.add(node);
+            set.add(serilization);
         }else{
-            map.put(hashcode,root);
+            map.put(serilization,node);
         }
-        return hashcode + 1;
+        return serilization;
     }
 }
