@@ -43,7 +43,7 @@ public class MaximumProductofWordLengths{
         }
         for(int i = 0 ;i<words.length;i++){
             for(int j = 1;j<words.length;j++){
-                if((code[i] & code[j]) != 0){
+                if((code[i] & code[j]) == 0){
                     ret = Math.max(ret,words[i].length() * words[j].length());
                 }
             }
