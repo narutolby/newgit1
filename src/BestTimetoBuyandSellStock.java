@@ -13,7 +13,7 @@ public class BestTimetoBuyandSellStock {
         for(int i = 0;i<prices.length;i++){
             min = Math.min(min,prices[i]);
             ret = Math.max(prices[i]-min,ret);
-g       }
+       }
         return ret;
     }
 }
