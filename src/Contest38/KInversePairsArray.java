@@ -10,6 +10,6 @@ public class KInversePairsArray {
 
     public int kInversePairs(int n, int k) {
         if(k == 0) return 1;
-
+        return 0;
     }
 }
