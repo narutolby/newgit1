@@ -10,14 +10,10 @@ public class BestTimetoBuyandSellStock {
         }
         int ret = 0;
         int min = Integer.MAX_VALUE;
-        for(int i = 0;i<prices.length;i++){
-            min = Math.min(min,prices[i]);
-            ret = Math.max(prices[i]-min,ret);
-<<<<<<< HEAD
-       }
-=======
+        for(int i = 0;i<prices.length;i++) {
+            min = Math.min(min, prices[i]);
+            ret = Math.max(prices[i] - min, ret);
         }
->>>>>>> parent of f2e1467... new java
         return ret;
     }
 }
