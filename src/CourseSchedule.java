@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.PriorityQueue;
 import java.util.Queue;
 
 /**
@@ -18,6 +19,7 @@ public class CourseSchedule {
             indegree[prerequisites[i][0]]++;
         }
         Queue<Integer> queue = new LinkedList<Integer>();
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
         for(int i = 0;i<indegree.length;i++){
             if(indegree[i] == 0) {
                 queue.offer(i);
