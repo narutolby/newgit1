@@ -1,5 +1,6 @@
 package indeed;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -9,66 +10,49 @@ import java.util.Scanner;
  */
 public class SpiralMove {
     public static void main(String[]args){
-        Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
-        long M = sc.nextLong();
-        byte[][]board = new byte[N][N];
-        int i = 0;
-        int j = 0;
-        board[i][j] = 1;
-        for(long m=1;m<M;){
-            boolean f = false;
-            while(j<N-1 && board[i][j+1] == 0){
+        int n = 10;
+        int[][] board = new int[n][n];
+        int i = 0,j = 0;
+        for(int m=1;m<n * n ;){
+            while(true){
+                board[i][j] = m;
+                if(j== n-1 || board[i][j+1] != 0){
+                    break;
+                }
                 j++;
                 m++;
-                board[i][j] = 1;
-                f = true;
-                if(m>=M){
-                    System.out.println((i+1) + " " + (j+1));
-                    return;
-                }
             }
-
-            while(i<N-1 && board[i+1][j] == 0){
+            while(true){
+                board[i][j] = m;
+                if(i== n-1 || board[i+1][j] != 0){
+                    break;
+                }
                 i++;
                 m++;
-                board[i][j] = 1;
-                f = true;
-                if(m>=M){
-                    System.out.println((i+1) + " " + (j+1));
-                    return;
-                }
             }
-
-            while(j>0 && board[i][j-1] == 0){
-                j--;
-                m++;
-                board[i][j] = 1;
-                f = true;
-                if(m>=M){
-                    System.out.println((i+1) + " " + (j+1));
-                    return;
+            while(true){
+                board[i][j] = m;
+                if(i == 0 || board[i-1][j] != 0){
+                    break;
                 }
-            }
-
-            while(i>0 && board[i-1][j] == 0){
                 i--;
                 m++;
-                board[i][j] = 1;
-                f = true;
-                if(m>=M){
-                    System.out.println((i+1) + " " + (j+1));
-                    return;
-                }
             }
 
-            if(!f){
-                break;
+            while(true){
+                board[i][j] = m;
+                if(j == 0 || board[i][j-1] != 0){
+                    break;
+                }
+                j--;
+                m++;
             }
         }
-
-        System.out.println((i+1) + " " + (j+1));
-
-
+        for(i=0;i<n;i++){
+            for(j=0;j<n;j++){
+                System.out.print(board[i][j]);
+            }
+            System.out.println();
+        }
     }
 }
