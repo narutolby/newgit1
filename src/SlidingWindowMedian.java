@@ -32,5 +32,6 @@ public class SlidingWindowMedian {
         AtomicInteger atomicInteger = new AtomicInteger();
         Queue<Integer> queue = new LinkedList<>();
         List<Integer>[] adj = new List[0];
+        TreeSet treeSet = new TreeSet();
     }
 }

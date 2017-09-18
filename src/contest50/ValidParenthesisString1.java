@@ -12,53 +12,28 @@ public class ValidParenthesisString1 {
         if(s == null || s.length() == 0){
             return true;
         }
-        char[]sa = s.toCharArray();
-        Stack<Character> stack = new Stack<>();
-        return check(stack,sa,0);
+        return helper(0,0,0,s);
     }
 
-    public boolean check(Stack<Character> stack,char[]s,int i){
-        if(i == s.length){
-            if(stack.isEmpty()){
-                return true;
-            }
+    public boolean helper(int l,int p,int c,String s){
+        if(p > l){
             return false;
         }
-        if(s[i] == '*'){
-            if(check(stack,s,i+1)){
-                return true;
-            }
-            stack.push('(');
-            if(check(stack,s,i+1)){
-                return true;
-            }
-            stack.pop();
-            if(!stack.isEmpty()){
-                char c = stack.pop();
-                if(check(stack,s,i+1)){
-                    return true;
-                }
-                stack.push(c);
-            }
-        }else if(s[i] == ')'){
-            if(stack.isEmpty()){
-                return false;
-            }
-            char c = stack.pop();
-            if(check(stack,s,i+1)){
-                return true;
-            }
-            stack.push(c);
-        }else{
-            stack.push('(');
-            if(check(stack,s,i+1)){
-                return true;
-            }
-            stack.pop();
+        if(c == s.length() ){
+            return p == l;
         }
-        return false;
+        char cc = s.charAt(c);
+        if(cc == '('){
+            return helper(l+1,p,c+1,s);
+        }else if (cc == ')'){
+            return helper(l,p+1,c+1,s);
+        }else{
+           return helper(l,p,c+1,s) || helper(l+1,p,c+1,s) || helper(l,p+1,c+1,s);
+        }
     }
+
+
     public static void main(String[]args) {
-        System.out.println(new ValidParenthesisString1().checkValidString("((*)"));
+        System.out.println(new ValidParenthesisString1().checkValidString(")("));
     }
 }

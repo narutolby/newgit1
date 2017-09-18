@@ -8,59 +8,23 @@ package contest50;
 public class ValidPalindromeII1 {
     public boolean validPalindrome(String s) {
         int l = 0,r = s.length() - 1;
-        while(l < r){
-            if(s.charAt(l) != s.charAt(r)){
-                break;
-            }
-            l++;
-            r--;
-            if(l >= r){
-                return  true;
-            }
-        }
-        int ll = l,rr = r;
-        l++;
-        boolean ret = true;
-        while(l < r){
-            if(s.charAt(l) != s.charAt(r)){
-                ret = false;
-                break;
-            }
+        char[]chars = s.toCharArray();
+        while(l < r && chars[l] == chars[r]){
             l++;
             r--;
         }
-        if(ret){
-            return ret;
-        }
-        l = ll;
-        r = rr - 1;
-        while(l < r){
-            if(s.charAt(l) != s.charAt(r)){
-               return false;
-            }
-            l++;
-            r--;
-        }
-        return true;
-    }
-
-    public boolean vlid(String s){
-       if(s == null){
-            return false;
-        }
-        if(s.length() == 0){
+        if(l>=r){
             return true;
         }
-        int l = 0,r = s.length() - 1;
-        while(l < r){
-            if(s.charAt(l) == s.charAt(r)){
-                l++;
-                r--;
-            }else{
-                return false;
-            }
+        return valid(chars,l+1,r) || valid(chars,l,r+1);
+    }
+
+    public boolean valid(char[]s,int i,int j){
+        while(i < j && s[i] == s[j]){
+            i++;
+            j--;
         }
-        return true;
+        return i >= j;
     }
     public static void main(String[]args){
         System.out.println(new ValidPalindromeII1().validPalindrome("deeee"));
