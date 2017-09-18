@@ -31,3 +31,4 @@
    * open api网关系统：通过配置化方式将rpc服务能力对外以http接口透出，负责open api的参数到rpc服务参数的转化，参数合法性校验，rpc服务编排
    
 ## 服务化架构图
+![](file:///Users/narutolby/develop/mystudy/newgit1/lALPAAAAARPYcuTM7s0B1A_468_238.png)
