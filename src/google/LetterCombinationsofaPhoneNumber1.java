@@ -2,6 +2,7 @@ package google;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -22,20 +23,15 @@ public class LetterCombinationsofaPhoneNumber1 {
             return Collections.EMPTY_LIST;
         }
         String[]dic = new String[]{"0","1","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
-        List<String> retList = new ArrayList<String>();
-        dfs(digits,0,dic,retList,"");
+        LinkedList<String> retList = new LinkedList<String>();
+        retList.add("");
+        while(retList.peek().length() != digits.length()){
+            String pop = retList.pop();
+            for(char cc : dic[digits.charAt(pop.length()) - '0'].toCharArray()){
+                retList.add(pop+cc);
+            }
+        }
         return retList;
     }
 
-    public void dfs(String d,int i,String[]dict,List<String> list,String ret){
-        if(i == d.length()){
-            list.add(ret);
-            return;
-        }
-        int num = d.charAt(i) - '0';
-        String str = dict[num];
-        for(char c : str.toCharArray()){
-            dfs(d,i+1,dict,list,ret+c);
-        }
-    }
 }
