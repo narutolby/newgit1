@@ -8,108 +8,77 @@ import java.util.Queue;
  * @description
  */
 public class SurroundedRegions {
-    Queue<Point> queue = new LinkedList<Point>();
-
     public void solve(char[][] board) {
-        if (board == null || board.length == 0) {
-            return;
+        int len = board.length;
+        if(len == 0) return;
+        int len1 = board[0].length;
+        if(len1 == 0){
+            return ;
         }
-
-        int m = board.length;
-        int n = board[0].length;
-        if(m > 30){
-            for( int i =0 ;i<m ;i++){
-                if(board[i][0] =='O'){
-                    bfs(board, i, 0, m, n);
-                }
-                if(board[i][n-1] == 'O'){
-                    bfs(board, i, n-1, m, n);
-                }
+        for(int i=0;i<len;i++){
+            if(board[i][0] == 'O'){
+                bfs(board,i,0,len1,len);
             }
-            for( int i =0 ;i<n ;i++){
-                if(board[0][i] =='O'){
-                    bfs(board, 0, i, m, n);
-                }
-                if(board[m-1][i] == 'O'){
-                    bfs(board, m-1, i, m, n);
-                }
-            }
-        }else{
-            for( int i =0 ;i<m ;i++){
-                if(board[i][0] =='O'){
-                    dfs(board, i, 0, m, n);
-                }
-                if(board[i][n-1] == 'O'){
-                    dfs(board, i, n-1, m, n);
-                }
-            }
-            for( int i =0 ;i<n ;i++){
-                if(board[0][i] =='O'){
-                    dfs(board, 0, i, m, n);
-                }
-                if(board[m-1][i] == 'O'){
-                    dfs(board, m-1, i, m, n);
-                }
+            if(board[i][len1-1] == 'O'){
+                bfs(board,i,len1-1,len1,len);
             }
         }
-
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                char c = board[i][j];
-                if (c == 'O') {
+        for(int i=0;i<len1;i++){
+            if(board[0][i] == 'O') {
+                bfs(board, 0, i, len1, len);
+            }
+            if(board[len-1][i] == 'O') {
+                bfs(board,len-1,i,len1,len);
+            }
+        }
+        for(int i=0;i<len;i++){
+            for(int j=0;j<len1;j++){
+                if(board[i][j] == 'O' ){
                     board[i][j] = 'X';
-                }
-                if (c == 'Y') {
+                }else if(board[i][j] == '#'){
                     board[i][j] = 'O';
                 }
+
             }
         }
+
     }
 
-    public void dfs(char[][] board, int i, int j, int m, int n) {
-        board[i][j] = 'Y';
-        if (i - 1 >= 0 && (board[i - 1][j] == 'O')) {
-            dfs(board, i - 1, j, m, n);
-        }
-        if (i + 1 < m && (board[i + 1][j] == 'O')) {
-            dfs(board, i + 1, j, m, n);
-        }
-        if (j - 1 >= 0 && (board[i][j-1] == 'O')) {
-            dfs(board, i , j - 1, m, n);
-        }
-        if (j + 1 < n && (board[i][j+1] == 'O')) {
-            dfs(board, i , j + 1, m, n);
-        }
-    }
 
-    public void bfs(char[][]board ,int x,int y ,int m,int n){
+    public void bfs(char[][]b,int x,int y,int len1,int len){
+        Queue<Point> queue = new LinkedList<>();
         queue.add(new Point(x,y));
+        int[] xx = {0,0,1,-1};
+        int[] yy = {1,-1,0,0};
+        b[x][y] = '#';
         while(!queue.isEmpty()){
-            Point point = queue.poll();
-            int i = point.i;
-            int j = point.j;
-            board[i][j] = 'Y';
-            if (i - 1 >= 0 && (board[i - 1][j] == 'O')) {
-                queue.offer(new Point(i-1,j));
-            }
-            if (i + 1 < m && (board[i + 1][j] == 'O')) {
-                queue.offer(new Point(i+1,j));
-            }
-            if (j - 1 >= 0 && (board[i][j-1] == 'O')) {
-                queue.offer(new Point(i,j-1));
-            }
-            if (j + 1 < n && (board[i][j+1] == 'O')) {
-                queue.offer(new Point(i,j+1));
+            Point next = queue.poll();
+            x = next.x;
+            y = next.y;
+            for(int i=0;i<4;i++){
+                int nx = x + xx[i];
+                int ny = y + yy[i];
+
+                if(nx>=1 && nx<len && ny>=1 && ny < len1 && b[nx][ny] == 'O'){
+                    queue.add(new Point(nx,ny));
+                    b[nx][ny] = '#';
+                }
             }
         }
     }
 
     class Point{
-        int i;
-        int j;
-        public Point(int i,int j){
-            this.i = i;
-            this.j = j;
+        int x,y;
+        public Point(int x,int y){
+            this.x = x;
+            this.y = y;
         }
+    }
+    public static void main(String[]args){
+        new SurroundedRegions().solve(new char[][]{
+                {'X','O','X'},
+                {'X','O','X'},
+                {'X','O','X'}
+        });
     }
 }
