@@ -32,7 +32,7 @@ public class RegularExpressionMatching {
         dp[0][0] = true;
         for(int i = 1;i<=p.length();i++){
             if(p.charAt(i-1) == '*'){
-                dp[i] = dp[i-1];
+                dp[0][i] = dp[0][i-2];
             }
         }
         for(int i = 1;i<=s.length();i++){
