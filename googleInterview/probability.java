@@ -1,0 +1,1 @@
+package google.usefullquestion;random.random()    用于生成一个0到1的随机符点数: 0 <= n < 1.0
