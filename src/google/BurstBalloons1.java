@@ -24,6 +24,6 @@ public class BurstBalloons1 {
         if(nums == null || nums.length == 0){
             return 0;
         }
-
+        return 0;
     }
 }
