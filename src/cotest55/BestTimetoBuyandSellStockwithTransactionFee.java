@@ -24,4 +24,6 @@ public class BestTimetoBuyandSellStockwithTransactionFee {
     public static void main(String[]args){
         System.out.println(new BestTimetoBuyandSellStockwithTransactionFee().maxProfit(new int[] {1,4,6,2,8,3,10,14} ,3));
     }
+
+
 }
