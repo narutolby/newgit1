@@ -8,6 +8,7 @@ import java.util.Random;
 
  Example:
 
+
  // Init a singly linked list [1,2,3].
  ListNode head = new ListNode(1);
  head.next = new ListNode(2);
