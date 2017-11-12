@@ -1,4 +1,4 @@
-package cotest55;
+package contest55;
 
 /**
  * @author boyang.lby

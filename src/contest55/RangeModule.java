@@ -1,4 +1,4 @@
-package cotest55;
+package contest55;
 
 import java.util.ArrayList;
 import java.util.List;
