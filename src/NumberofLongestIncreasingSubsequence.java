@@ -13,7 +13,7 @@ public class NumberofLongestIncreasingSubsequence {
         int[]dp = new int[len];
         Arrays.fill(dp,1);
         Arrays.fill(count,1);
-        int max = 1t ;
+        int max = 1 ;
         for(int i=1;i<len;i++){
             for(int j=i-1;j>=0;j--){
                 if(nums[i] > nums[j]){
