@@ -21,10 +21,22 @@ return x&(-x);
 public class FenWickTree {
     int[]c;
     int n = c.length;
+
+    /**
+     * 寻找x可以通过lowbit函数，即通过计算机补码的巧用，x=i&（-i）
+     * @param x
+     * @return
+     */
     int lowbit(int x)
     {
         return x&(-x);
     }
+
+    /**
+     * 而每一个父节点存储的数据都是下面所有子节点的全部信息。对子节点修改就必定会对其所有的父节点进行更新，父节点c[i]下标的查找如下：
+     * @param i
+     * @param x
+     */
     void update(int i, int x)
     {
         while(i<=n)
@@ -33,6 +45,12 @@ public class FenWickTree {
             i+=lowbit(i);//更新父节点
         }
     }
+
+    /**
+     * 对于查找1~i的和、最大值、最小值可以表示为：
+     * @param i
+     * @return
+     */
     int sum(int i)
     {
         int res=0;
@@ -43,4 +61,5 @@ public class FenWickTree {
         }
         return res;
     }
+
 }

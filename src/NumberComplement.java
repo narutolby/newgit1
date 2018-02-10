@@ -26,5 +26,13 @@ public class NumberComplement {
     public static void main(String[]args){
         new NumberComplement().findComplement(5);
     }
-
-}
+//
+// * @author boyang.lby
+// * @date 2/1/18
+// * @description
+// */
+//public class NumberComplement {
+//    public int findComplement(int num) {
+//        return (-num - 1) & ((1 << Integer.toBinaryString(num).length())-1);
+//    }
+//}
