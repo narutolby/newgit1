@@ -17,15 +17,16 @@ public class NumberComplement {
     public int findComplement(int num) {
         int ceil = 1;
         Integer.highestOneBit(1);
-        while(ceil < num){
-             ceil = ceil<< 1;
+        while (ceil < num) {
+            ceil = ceil << 1;
         }
-        return  (-num-1) & (ceil - 1);
+        return (-num - 1) & (ceil - 1);
     }
 
-    public static void main(String[]args){
+    public static void main(String[] args) {
         new NumberComplement().findComplement(5);
     }
+}
 //
 // * @author boyang.lby
 // * @date 2/1/18
